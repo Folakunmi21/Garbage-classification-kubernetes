@@ -313,7 +313,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 ### 2. Patch metrics-server to work without TLS
 
 ```bash
-kubectl get -n kube-system deployment metrics-server -o jsonpath='{.spec.template.spec.containers[0].args}'
+kubectl patch deployment metrics-server -n kube-system --type='json' -p='[{"op": "add", "path": "/spec/template/spec/containers/0/args/-", "value": "--kubelet-insecure-tls"}]'
 ```
 
 ### 3. Wait for metrics-server to be ready
