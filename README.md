@@ -199,7 +199,7 @@ docker build -f Dockerfile -t model-converter .
 ### 2. Run Docker Image
 
 ```bash
-docker run --rm -v ${PWD}/../models:/app/models model-converter
+docker run --rm -v ${PWD}:/app model-converter
 ```
 
 This will:
