@@ -157,7 +157,7 @@ docker --version
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/garbage-classification-kubernetes.git
+git clone https://github.com/folakunmi21/garbage-classification-kubernetes.git
 cd garbage-classification-kubernetes
 ```
 
