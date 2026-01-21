@@ -26,7 +26,7 @@ Waste management is a global challenge, with improper sorting leading to increas
 - **Accuracy:** ~94%
 - **Format:** ONNX (optimized for inference)
   
-The original Keras model can be found [here](https://huggingface.co/Folakunmi21/garbage-classifier/tree/main). The full training notebook can be found in this repo in /models.
+The original Keras model(before conversion to ONNX) can be found [here](https://huggingface.co/Folakunmi21/garbage-classifier/tree/main). The full training notebook can also be found in this repo in /models.
 
 ## Categories
 
