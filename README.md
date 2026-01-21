@@ -292,20 +292,15 @@ kubectl describe service garbage-classifier
 ```
 
 ## Testing the Deployed Service
-
-Check the health endpoint:
-
-```bash
-curl http://localhost:30080/health
-```
-
 Port forward the service:
-
 ```bash
 kubectl port-forward service/garbage-classifier 30080:8080
 ```
 
-Now it's accessible on port 30080.
+Check the health endpoint:
+```bash
+curl http://localhost:30080/health
+```
 
 ## Horizontal Pod Autoscaling
 
