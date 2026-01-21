@@ -234,8 +234,8 @@ The large percentage is because the model is currently outputting raw scores (lo
 The API is defined in `app.py`.
 
 ### 1. Build the Docker image
-
 ```bash
+cd ..
 docker build -f Dockerfile.api -t garbage-classifier:v1 .
 ```
 
