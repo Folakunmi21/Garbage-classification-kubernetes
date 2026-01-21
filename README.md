@@ -197,11 +197,19 @@ docker build -f Dockerfile -t model-converter .
 ```
 
 ### 2. Run Docker Image
-
+# Create a temporary container from the image
 ```bash
-docker run --rm -v ${PWD}:/app model-converter
+docker create --name temp-container model-converter
+```
+# Copy the generated model out to your local 'models' folder
+```bash
+docker cp temp-container:/app/xception_v4_final.onnx .
 ```
 
+# Remove the temporary container
+```bash
+docker rm temp-container
+```
 This will:
 
 - Download the Keras model from Hugging Face
