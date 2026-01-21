@@ -218,15 +218,16 @@ This will:
 ### 3. Verify ONNX Model (optional)
 
 ```bash
-python verify-onnx.py
+python verify-onnx.py 202512-plastic149.jpg
 ```
 
 Example of expected output:
 
 ```
 Result...
-Predicted: plastic (confidence: 0.87)
+Predicted: plastic (confidence: 596.89)
 ```
+The large percentage is because the model is currently outputting raw scores (logits). We will be returning normalized probabilities later.
 
 ## Building the FastAPI Service
 
