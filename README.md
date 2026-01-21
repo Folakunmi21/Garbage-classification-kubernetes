@@ -364,3 +364,22 @@ You should see the number of replicas increase as CPU usage rises.
 ```bash
 kubectl get pods -w
 ```
+
+## Clean Up
+In order to not waste RAM/CPU, clean up when you're done.
+
+### Delete the deployment and service
+```bash
+kubectl delete -f k8s/deployment.yaml
+kubectl delete -f k8s/service.yaml
+kubectl delete -f k8s/hpa.yaml
+```
+
+### Or delete everything at once
+bashkubectl delete all -l app=clothing-classifier
+kubectl delete hpa clothing-classifier-hpa
+
+### Delete the Kind cluster
+```bash
+kind delete cluster --name mlzoomcamp
+```
