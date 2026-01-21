@@ -197,16 +197,15 @@ docker build -f Dockerfile -t model-converter .
 ```
 
 ### 2. Run Docker Image
-# Create a temporary container from the image
+#Create a temporary container from the image
 ```bash
 docker create --name temp-container model-converter
 ```
-# Copy the generated model out to your local 'models' folder
+#Copy the generated model out to your local 'models' folder
 ```bash
 docker cp temp-container:/app/xception_v4_final.onnx .
 ```
-
-# Remove the temporary container
+#Remove the temporary container
 ```bash
 docker rm temp-container
 ```
