@@ -1,5 +1,4 @@
-# Garbage Classification with Deep Learning & Kubernetes
-
+# Garbage Classification Model End-to-End Deployment (TensorFlow → ONNX → FastAPI → Docker → Kubernetes)
 This is an end-to-end machine learning project that classifies garbage images into 10 categories using a deep learning model (Xception), deployed as a FastAPI microservice on Kubernetes with horizontal pod autoscaling.
 
 ## Problem Statement
@@ -26,6 +25,8 @@ Waste management is a global challenge, with improper sorting leading to increas
 - **Output:** 10 garbage categories
 - **Accuracy:** ~94%
 - **Format:** ONNX (optimized for inference)
+  
+The original Keras model can be found [here](https://huggingface.co/Folakunmi21/garbage-classifier/tree/main). The full training notebook can be found in this repo in /models.
 
 ## Categories
 
