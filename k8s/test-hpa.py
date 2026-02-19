@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 url = 'http://localhost:30080/predict'
 
 request_data = {
-    "url": "http://bit.ly/mlbookcamp-pants"
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Bouteille.jpg"
 }
 
 def send_request(_):
